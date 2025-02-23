@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PopCulture tv</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="styling.css" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between">
+      <div class="d-flex align-items-center">
+        <button class="custom-btn" type="submit" onclick="reloadPage()">PopCulture TV</button>
+        <i class="fas fa-video ml-2" style="color: white"></i>
+      </div>
+      
+      <div id="navbarNav">
+        <form id="searchForm" class="form-inline my-2 my-lg-0">
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search Movies" aria-label="Search">
+          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron py-3">
+      <h1 class="display-4">Hello, Cinephile!</h1>
+      <p class="lead">ALL MOVIES! ALL THE TIME!!</p>
+      <hr class="my-4" />
+      <!-- Flex container for text and dropdown -->
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <p class="yes" style="font-family: 'Brush Script MT', cursive; font-size: 30px; margin: 0">You can find every movie, and see what they are all about</p>
+        <!-- New sort dropdown -->
+        <div id="sortContainer">
+          <label for="sortSelect" class="mr-2">Sort By:</label>
+          <select id="sortSelect" class="form-control">
+            <option value="popularity.desc" selected>Popularity Descending</option>
+            <option value="popularity.asc">Popularity Ascending</option>
+            <option value="vote_average.desc">Rating Descending</option>
+            <option value="vote_average.asc">Rating Ascending</option>
+            <option value="release_date.desc">Release Date Descending</option>
+            <option value="release_date.asc">Release Date Ascending</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <h2>Movies <i class="fas fa-compact-disc"></i></h2>
+      <div class="row" id="movieList"></div>
+    </div>
+
+    <div id="errorMessage" style="display: none"></div>
+    <div id="messageContainer"></div>
+    <div id="messageContaine"></div>
+    <div id="pagination" class="pagination-container"></div>
+
+    <!-- Bootstrap JavaScript via CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-B7dgjIEhYqZ7S25l6i9I7WrpK0foQOLpfECbJUn6zpcgHLx+tjnb1ST90uyZlMkh"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyFQ1AH63ZCh9TMp5IJew7fgDSN6zPskD"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <script src="functionality.js"></script>
+  </body>
+</html>

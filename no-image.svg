@@ -1,0 +1,53 @@
+<svg width="100%" height="100%" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#e9ecef"/>
+    
+    <!-- Camera body and elements -->
+    <g transform="translate(200,300)" fill="#adb5bd">
+        <!-- Camera body -->
+        <path d="
+            M-70,-40 
+            h140 
+            a10,10 0 0 1 10,10 
+            v60 
+            a10,10 0 0 1 -10,10 
+            h-140 
+            a10,10 0 0 1 -10,-10
+            v-60
+            a10,10 0 0 1 10,-10
+            z
+        "/>
+        
+        <!-- Lens -->
+        <circle cx="0" cy="0" r="30"/>
+        <circle cx="0" cy="0" r="25" fill="#e9ecef"/>
+        
+        <!-- Flash -->
+        <rect x="30" y="-30" width="20" height="10" rx="2"/>
+        
+        <!-- Broken glass effect -->
+        <path d="
+            M-15,-15 l30,30 M15,-15 l-30,30
+            M-20,0 l40,0 M0,-20 l0,40
+        " stroke="#6c757d" stroke-width="3"/>
+        
+        <!-- Top part of camera -->
+        <path d="
+            M-50,-40
+            v-15
+            h40
+            l10,15
+            h50
+            v0
+            z
+        "/>
+    </g>
+    
+    <!-- Text -->
+    <text x="200" y="400" 
+          text-anchor="middle" 
+          fill="#6c757d" 
+          font-family="Arial" 
+          font-size="16" 
+          font-weight="bold">No Image Available</text>
+</svg>
